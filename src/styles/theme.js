@@ -4,23 +4,27 @@ export const theme = extendTheme({
   initialColorMode: "dark",
   useSystemColorMode: false,
   fonts: {
-    heading: "CaviarDreams",
-    body: "CaviarDreams",
+    heading: "Playfair Display, serif",
+    body: "Nunito, sans-serif",
   },
   colors: {
-    rosaxoq: "#ff00ff",
+    cinza: "#141314",
+    cinzaclaro: "#222222",
+    cinzaescuro: "#0D0D0D",
   },
   components: {
     Button: {
       baseStyle: {
-        _hover: {
-          //textDecoration: "underline",
-        },
+        fontFamily: "Playfair Display",
+        borderRadius: 0,
       },
     },
   },
   styles: {
     global: {
+      input: {
+        borderRadius: 0,
+      },
       svg: {
         display: "inline",
       },
@@ -30,9 +34,8 @@ export const theme = extendTheme({
         },
       },
       body: {
-        /* bg: "var(--white)",
-        color: "var(--white)",
-        lineHeight: "inherit", */
+        bg: "cinza",
+        color: "white",
       },
     },
   },
