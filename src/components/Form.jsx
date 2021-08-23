@@ -113,7 +113,7 @@ export function Form() {
           </Button>
         )}
       </Flex>
-      <Image
+      <Image zIndex={-1}
         pos="absolute"
         right={0}
         top={{ base: "0", sm: "-70%" }}

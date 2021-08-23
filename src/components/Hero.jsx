@@ -16,7 +16,7 @@ export function Hero() {
     <Box align="center" w="100%">
       <Flex
         pos="relative"
-        p={{ base: "4rem 1rem", lg: "7rem 1rem" }}
+        p={{ base: "4rem 1rem", lg: "7rem 1rem 2rem" }}
         align="center"
         maxW={1050}
         justify="space-between"
@@ -56,9 +56,9 @@ export function Hero() {
             Faça seu orçamento
           </Button>
         </VStack>
-        <Box
+        <Box 
           transform="translate(-50%, -50%)"
-          zIndex={-1}
+          zIndex={-9}
           top={{ base: "65%", lg: "50%" }}
           left={{ base: "50%", lg: "75%" }}
           w={{ base: 500, lg: 600 }}
@@ -66,12 +66,12 @@ export function Hero() {
           filter="blur(100px)"
           bgGradient="linear(to-r, #6f6799, #b3748c, #9a1f37)"
           pos="absolute"
-        ></Box>
+        />
       </Flex>
-      <Box
+      <Box zIndex={9}
         onClick={() => window.scrollTo(0, 1000)}
         display={{ base: "none", md: "block" }}
-        mt={-10}
+        mb={18}
       >
         <ScrollSvg />
       </Box>

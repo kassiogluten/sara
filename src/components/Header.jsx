@@ -17,11 +17,21 @@ import {
   useDisclosure,
   VStack,
   Link,
+  Center,
+  CloseButton,
 } from "@chakra-ui/react";
 
 import { FiMenu } from "react-icons/fi";
 import React from "react";
-import { FacebookSvg, InstagramSvg, LogoSvg, SpotifySvg, YoutubeSvg } from "../icons";
+import {
+  FacebookSvg,
+  InstagramSvg,
+  Logo2Svg,
+  LogoSvg,
+  SpotifySvg,
+  YoutubeSvg,
+} from "../icons";
+import { CloseIcon } from "@chakra-ui/icons";
 
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -46,7 +56,11 @@ export function Header() {
             onClick={onOpen}
             display={{ base: "flex", lg: "none" }}
           >
-            <FiMenu color="white" size={30} />
+            {isOpen ? (
+              <CloseButton color="white" size={30} />
+            ) : (
+              <FiMenu color="white" size={30} />
+            )}
           </IconButton>
           <HStack display={{ base: "none", lg: "flex" }} spacing={10}>
             <Menu1 />
@@ -57,26 +71,33 @@ export function Header() {
 
           <Menu2 />
         </Flex>
-        <Drawer
+        <Drawer  placement="left"
+          closeOnOverlayClick
           autoFocus={false}
           returnFocusOnClose={false}
           isOpen={isOpen}
-          placement="right"
           onClose={onClose}
+          size="full"
         >
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton m={3} />
-            <DrawerHeader>Menu</DrawerHeader>
-
-            <DrawerBody onClick={onClose}>
-              <VStack spacing={10}>
+          <DrawerContent bg="transparent">
+            <DrawerHeader onClick={onClose} pt={12} align="end" bg="transparent" />
+            <DrawerBody
+              display="flex"
+              flexDir="column"
+              bg="cinza"
+              onClick={onClose}
+              alignItems="center"
+              justifyContent="space-evenly"
+            >
+              <VStack
+                pb={4}
+                fontSize={24}
+                fontFamily="Playfair Display"
+                spacing={10}
+              >
                 <Menu1 />
               </VStack>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Botao1
-              </Button>
-              <Button colorScheme="blue">Botao2</Button>
+              <Logo2Svg />
             </DrawerBody>
           </DrawerContent>
         </Drawer>
@@ -119,16 +140,16 @@ const Menu2 = () => (
     </HStack>
     <HStack spacing={2}>
       <Link href="#">
-        <SpotifySvg/>
+        <SpotifySvg />
       </Link>
       <Link href="#">
-        <FacebookSvg/>
+        <FacebookSvg />
       </Link>
       <Link href="#">
-        <YoutubeSvg/>
+        <YoutubeSvg />
       </Link>
       <Link href="#">
-        <InstagramSvg/>
+        <InstagramSvg />
       </Link>
     </HStack>
   </HStack>

@@ -44,7 +44,14 @@ export function Blog() {
         </Heading>
         <Posts />
       </Flex>
-      <Image pos="absolute" left={0} top={0} alt="Efeito" src="/blur1.svg"/>
+      <Image
+        zIndex={-1}
+        pos="absolute"
+        left={0}
+        top={0}
+        alt="Efeito"
+        src="/blur1.svg"
+      />
     </Box>
   );
 }
