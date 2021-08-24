@@ -1,23 +1,16 @@
 import {
   Box,
   Flex,
-  Heading,
-  Stack,
   HStack,
   IconButton,
   Text,
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
-  DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
-  Button,
   useDisclosure,
   VStack,
   Link,
-  Center,
   CloseButton,
 } from "@chakra-ui/react";
 
@@ -31,7 +24,6 @@ import {
   SpotifySvg,
   YoutubeSvg,
 } from "../icons";
-import { CloseIcon } from "@chakra-ui/icons";
 
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();

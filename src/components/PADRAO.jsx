@@ -8,8 +8,7 @@ export function Hero() {
   return (
     <Box align="center" w="100%" >
       <Flex
-        pt={100}
-        px="1rem"
+        p="5rem 1rem"
         align="center"
         maxW={1200}
         

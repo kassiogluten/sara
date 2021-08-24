@@ -15,12 +15,12 @@ const posts = [
     img: "blog2.jpg",
   },
   {
-    title: "8 passos para melhorar seu relacionamento com o guarda-roupas",
+    title: "8 passos para melhorar seu relacionamento com o guarda-roupass",
     img: "blog1.jpg",
   },
   {
     title:
-      "Vamos viajar? 5 dicas infaliveis para montar sua mala inteligente de viagem",
+      "Vamos viajar? 5 dicas infaliveis para montar sua mala inteligente de viagemm",
     img: "blog2.jpg",
   },
 ];
@@ -67,10 +67,10 @@ const Posts = () => (
         spaceBetween: 20,
       },
     }}
-    className="mySwiper"
+    className="Blog"
   >
     {posts.map((post) => (
-      <SwiperSlide key="post.img">
+      <SwiperSlide key={post.title}>
         <Box pos="relative">
           <Image alt={post.title} src={post.img} />
           <Heading
