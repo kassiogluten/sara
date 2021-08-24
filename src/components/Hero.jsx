@@ -21,7 +21,7 @@ export function Hero() {
         maxW={1050}
         justify="space-between"
         flexDir={{ base: "column", lg: "row" }}
-        overflow={{ base: 'hidden', md: 'visible' }}
+        overflow={{ base: "hidden", md: "visible" }}
       >
         <VStack>
           <Heading
@@ -37,6 +37,9 @@ export function Hero() {
             Consultoria de Imagem e Design de Moda
           </Text>
           <Button
+            as="a"
+            href="#contato"
+            lineHeight="200%"
             display={{ base: "none", lg: "block" }}
             borderWidth={2}
             variant="outline"
@@ -48,6 +51,9 @@ export function Hero() {
         <VStack>
           <Image mb={8} alt="Sarah Jacob" src="/sara.jpg" />
           <Button
+            as="a"
+            href="#contato"
+            lineHeight="200%"
             display={{ base: "block", lg: "none" }}
             borderWidth={2}
             variant="outline"
@@ -56,7 +62,7 @@ export function Hero() {
             Faça seu orçamento
           </Button>
         </VStack>
-        <Box 
+        <Box
           transform="translate(-50%, -50%)"
           zIndex={-9}
           top={{ base: "65%", lg: "50%" }}
@@ -68,7 +74,8 @@ export function Hero() {
           pos="absolute"
         />
       </Flex>
-      <Box zIndex={9}
+      <Box
+        zIndex={9}
         onClick={() => window.scrollTo(0, 1000)}
         display={{ base: "none", md: "block" }}
         mb={18}

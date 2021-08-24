@@ -66,9 +66,9 @@ export function Content({
               </Text>
             </Box>
 
-            <Card colors={colors} text={step1} step="01"/>
-            <Card colors={colors} text={step2} step="02"/>
-            <Card colors={colors} text={step3} step="03"/>
+            <Card colors={colors} text={step1} step="01."/>
+            <Card colors={colors} text={step2} step="02."/>
+            <Card colors={colors} text={step3} step="03."/>
           </Flex>
           <Image
             py={{ base: 8, lg: 0 }}

@@ -10,9 +10,9 @@ import {
   DrawerContent,
   useDisclosure,
   VStack,
-  Link,
   CloseButton,
 } from "@chakra-ui/react";
+import Link from 'next/link'
 
 import { FiMenu } from "react-icons/fi";
 import React from "react";
@@ -60,10 +60,10 @@ export function Header() {
           <Box display={{ base: "none", lg: "flex" }}>
             <LogoSvg />
           </Box>
-
           <Menu2 />
         </Flex>
-        <Drawer  placement="left"
+        <Drawer
+          placement="left"
           closeOnOverlayClick
           autoFocus={false}
           returnFocusOnClose={false}
@@ -72,7 +72,12 @@ export function Header() {
           size="full"
         >
           <DrawerContent bg="transparent">
-            <DrawerHeader onClick={onClose} pt={12} align="end" bg="transparent" />
+            <DrawerHeader
+              onClick={onClose}
+              pt={12}
+              align="end"
+              bg="transparent"
+            />
             <DrawerBody
               display="flex"
               flexDir="column"
@@ -100,21 +105,21 @@ export function Header() {
 
 const Menu1 = () => (
   <>
-    <Text as="a" href="#">
+    <Link href="/">
       Home
-    </Text>
-    <Text as="a" href="#">
+    </Link>
+    <Link href="/#servicos">
       Serviços
-    </Text>
-    <Text as="a" href="#">
+    </Link>
+    <Link href="/#cases">
       Cases
-    </Text>
-    <Text as="a" href="#">
+    </Link>
+    <Link href="/#blog">
       Blog
-    </Text>
-    <Text as="a" href="#">
+    </Link>
+    <Link href="/#contato">
       Contato
-    </Text>
+    </Link>
   </>
 );
 const Menu2 = () => (
@@ -131,18 +136,18 @@ const Menu2 = () => (
       </Text>
     </HStack>
     <HStack spacing={2}>
-      <Link href="#">
+      <a href="https://spotify.com">
         <SpotifySvg />
-      </Link>
-      <Link href="#">
+      </a>
+      <a href="https://facebook.com">
         <FacebookSvg />
-      </Link>
-      <Link href="#">
+      </a>
+      <a href="https://youtube.com">
         <YoutubeSvg />
-      </Link>
-      <Link href="#">
+      </a>
+      <a href="https://instagram.com">
         <InstagramSvg />
-      </Link>
+      </a>
     </HStack>
   </HStack>
 );

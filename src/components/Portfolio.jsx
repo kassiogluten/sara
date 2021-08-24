@@ -22,6 +22,7 @@ export function Portfolio() {
       w="100%"
       display="inline-flex"
       flexWrap="wrap"
+      id="cases"
     >
       <Grid
         h={{ base: "200vw", lg: "50vw" }}

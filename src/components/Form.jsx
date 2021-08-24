@@ -44,7 +44,7 @@ export function Form() {
   }
 
   return (
-    <Box align="center" w="100%" pos="relative">
+    <Box align="center" w="100%" pos="relative" id="contato">
       <Flex p="4rem 1rem" align="center" maxW={600} flexDir="column" as="form" onSubmit={handleSubmit(handleSendMessage)}>
         <Heading pb={2}>Fale comigo</Heading>
         <VStack w="full" py={8} align="start" >

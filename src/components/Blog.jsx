@@ -29,7 +29,7 @@ SwiperCore.use([Navigation]);
 
 export function Blog() {
   return (
-    <Box align="center" w="100%" pos="relative">
+    <Box align="center" w="100%" pos="relative" id="blog">
       <Flex
         p="80px 1rem"
         pr={0}
