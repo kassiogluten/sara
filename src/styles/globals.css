@@ -95,7 +95,7 @@ input::placeholder {
 }
 
 .Testimonials .swiper-pagination-bullet {
-  opacity: .5;
+  opacity: 0.5;
   margin: 0 2.5px !important;
   width: 10px;
   height: 10px;
@@ -123,6 +123,45 @@ input::placeholder {
   }
 
   .Blog .swiper-slide {
-    width: 80% ;
+    width: 80%;
+  }
+}
+
+#circulo {
+  animation: rotate 15s infinite alternate ease-in-out;
+  transform-origin: center center;
+}
+#blur {
+  animation: hues 2500ms infinite alternate;
+}
+#copyright:hover #coracao {
+  animation: coracao 1s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+@keyframes hues {
+  from {
+    filter: hue-rotate(-45deg) saturate(1);
+  }
+  to {
+    filter: hue-rotate(45deg) saturate(2);
+  }
+}
+@keyframes coracao {
+  0%,
+  35%,
+  50%,
+  75%,
+  100% {
+    transform: scale(1);
+  }
+  40%,60% {
+    transform: scale(1.2);
   }
 }

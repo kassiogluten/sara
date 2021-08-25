@@ -13,7 +13,7 @@ import { ScrollSvg } from "../../../icons";
 
 export function Hero({effect, title, subtitle1, subtitle2}) {
   return (
-    <Box bgRepeat="no-repeat" bgPos="bottom" bgImage={effect} align="center" w="100%" pos="relative">
+    <Box id="blur" bgRepeat="no-repeat" bgPos="bottom" bgImage={effect} align="center" w="100%" pos="relative">
       <Flex
         p={{ base: "4rem 1rem 8rem", lg: "15rem 1rem" }}
         textAlign="start"

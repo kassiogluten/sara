@@ -1,11 +1,9 @@
-import { CalendarIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
   Flex,
   Heading,
   Image,
-  Link,
   Stack,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";

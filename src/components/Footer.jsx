@@ -104,7 +104,7 @@ export function Footer() {
           </HStack>
         </Stack>
       </Flex>
-      <Flex p="1rem" maxW={1200}>
+      <Flex id="copyright" p="1rem" maxW={1200}>
         <Text fontSize=".9rem" p={2} w="full">
           Feito com <HeartSvg /> por Suricato Agência
         </Text>

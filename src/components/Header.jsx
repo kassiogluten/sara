@@ -3,16 +3,14 @@ import {
   Flex,
   HStack,
   IconButton,
-  Text,
   Drawer,
   DrawerBody,
   DrawerHeader,
   DrawerContent,
   useDisclosure,
-  VStack,
   CloseButton,
 } from "@chakra-ui/react";
-import Link from 'next/link'
+import Link from "next/link";
 
 import { FiMenu } from "react-icons/fi";
 import React from "react";
@@ -43,24 +41,32 @@ export function Header() {
           maxW={1200}
           justify="space-between"
         >
-          <IconButton
-            bg="none"
-            onClick={onOpen}
-            display={{ base: "flex", lg: "none" }}
-          >
-            {isOpen ? (
-              <CloseButton color="white" size={30} />
-            ) : (
-              <FiMenu color="white" size={30} />
-            )}
-          </IconButton>
-          <HStack display={{ base: "none", lg: "flex" }} spacing={10}>
-            <Menu1 />
-          </HStack>
-          <Box display={{ base: "none", lg: "flex" }}>
-            <LogoSvg />
-          </Box>
-          <Menu2 />
+          <Flex w="full" justify="space-between" display={{ base: "flex", lg: "none" }}>
+            <IconButton
+              bg="none"
+              onClick={onOpen}
+              
+            >
+              {isOpen ? (
+                <CloseButton color="white" size={30} />
+              ) : (
+                <FiMenu color="white" size={30} />
+              )}
+            </IconButton>
+            <SocialMenu />
+          </Flex>
+          <Flex w="full" align="center" justify="space-between" display={{ base: "none", lg: "flex" }}>
+            <Flex flex={1} justify="space-between">
+              <Menu1 />
+            </Flex>
+            <Box flex={.6}>
+              <LogoSvg />
+            </Box>
+            <Flex flex={1} justify="space-between">
+              <Menu2 />
+              <SocialMenu />
+            </Flex>
+          </Flex>
         </Flex>
         <Drawer
           placement="left"
@@ -85,16 +91,14 @@ export function Header() {
               onClick={onClose}
               alignItems="center"
               justifyContent="space-evenly"
+              fontSize={24}
+              fontFamily="Playfair Display"
             >
-              <VStack
-                pb={4}
-                fontSize={24}
-                fontFamily="Playfair Display"
-                spacing={10}
-              >
                 <Menu1 />
-              </VStack>
-              <Logo2Svg />
+                <Menu2 />
+              <Box pt={8}>
+                <Logo2Svg />
+              </Box>
             </DrawerBody>
           </DrawerContent>
         </Drawer>
@@ -105,49 +109,33 @@ export function Header() {
 
 const Menu1 = () => (
   <>
-    <Link href="/">
-      Home
-    </Link>
-    <Link href="/#servicos">
-      Serviços
-    </Link>
-    <Link href="/#cases">
-      Cases
-    </Link>
-    <Link href="/#blog">
-      Blog
-    </Link>
-    <Link href="/#contato">
-      Contato
-    </Link>
+    <Link href="/">Home</Link>
+    <Link href="/#servicos">Serviços</Link>
+    <Link href="/#cases">Cases</Link>
+    <Link href="/#blog">Blog</Link>
+    <Link href="/#contato">Contato</Link>
   </>
 );
 const Menu2 = () => (
-  <HStack spacing={10}>
-    <HStack spacing={10} display={{ base: "none", lg: "flex" }}>
-      <Text as="a" href="/mentorias">
-        Mentorias
-      </Text>
-      <Text as="a" href="#">
-        Cursos
-      </Text>
-      <Text as="a" href="/estacoes">
-        Estações
-      </Text>
-    </HStack>
-    <HStack spacing={2}>
-      <a href="https://spotify.com">
-        <SpotifySvg />
-      </a>
-      <a href="https://facebook.com">
-        <FacebookSvg />
-      </a>
-      <a href="https://youtube.com">
-        <YoutubeSvg />
-      </a>
-      <a href="https://instagram.com">
-        <InstagramSvg />
-      </a>
-    </HStack>
+  <>
+    <Link href="/mentorias">Mentorias</Link>
+    <Link href="/#">Cursos</Link>
+    <Link href="/">Estações</Link>
+  </>
+);
+const SocialMenu = () => (
+  <HStack spacing={2}>
+    <a href="https://spotify.com">
+      <SpotifySvg />
+    </a>
+    <a href="https://facebook.com">
+      <FacebookSvg />
+    </a>
+    <a href="https://youtube.com">
+      <YoutubeSvg />
+    </a>
+    <a href="https://instagram.com">
+      <InstagramSvg />
+    </a>
   </HStack>
 );
