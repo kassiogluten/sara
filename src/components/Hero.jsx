@@ -1,12 +1,6 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+
+import Image from "next/image";
 
 import React from "react";
 import { ScrollSvg } from "../icons";
@@ -49,7 +43,9 @@ export function Hero() {
           </Button>
         </VStack>
         <VStack>
-          <Image mb={8} alt="Sarah Jacob" src="/sara.jpg" />
+          <Box mb={8}>
+            <Image width={488} height={557} alt="Sarah Jacob" src="/sara.jpg" />
+          </Box>
           <Button
             as="a"
             href="#contato"

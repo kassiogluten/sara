@@ -16,7 +16,7 @@ export default function Moda() {
       </Head>
       <Header />
       <Hero
-        effect="/blur-moda.png"
+        effect="/blur-moda.svg"
         title="Consultoria de design de moda."
         subtitle1="O estilo pessoal de cada pessoa está baseado em nossas crenças e valores, com isso posso te afirmar que todos temos estilo, só precisamos entendermos, identificarmos e harmonizá-lo com nosso gosto pessoal e silhueta."
       />

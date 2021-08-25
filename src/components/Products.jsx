@@ -8,6 +8,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import { useRouter } from "next/router";
+
 import React from "react";
 
 export function Products() {
@@ -45,35 +47,46 @@ export function Products() {
   );
 }
 
-const Card = ({ img, title, desc, url }) => (
-  <Flex
-    alignSelf="center"
-    maxW={{ base: 400, lg: "none" }}
-    my={4}
-    borderWidth={1}
-    borderColor="white"
-    flexDir={{ base: "column", lg: "row" }}
-    _hover={{ cursor: "pointer" }}
-  >
-    <Image transform="scale(1.008)" objectFit="contain" alt={title} src={img} />
-    <Stack
-      p={8}
-      textAlign="start"
-      align="start"
-      justify="space-between"
-      spacing={4}
+function Card({ img, title, desc, url }) {
+  const router = useRouter();
+  return (
+    <Flex
+      alignSelf="center"
+      maxW={{ base: 400, lg: "none" }}
+      my={4}
+      borderWidth={1}
+      borderColor="white"
+      flexDir={{ base: "column", lg: "row" }}
+      _hover={{ cursor: "pointer", background:"cinzaclaro" }}
+      onClick={() => router.push(url)}
+      transition="background 200ms ease"
     >
-      <Heading maxW={280}>{title}</Heading>
-      <Text>{desc}</Text>
-      <Button
-        bg="white"
-        color="cinza"
-        w={{ base: "full", lg: 300 }}
-        as="a"
-        href={url}
+      <Image
+        transform="scale(1.008)"
+        objectFit="contain"
+        alt={title}
+        src={img}
+      />
+      <Stack
+        p={8}
+        textAlign="start"
+        align="start"
+        justify="space-between"
+        spacing={4}
       >
-        Saiba mais
-      </Button>
-    </Stack>
-  </Flex>
-);
+        <Heading maxW={280}>{title}</Heading>
+        <Text>{desc}</Text>
+        <Button
+          bg="white"
+          color="cinza"
+          colorScheme="rs"
+          w={{ base: "full", lg: 300 }}
+          as="a"
+          href={url}
+        >
+          Saiba mais
+        </Button>
+      </Stack>
+    </Flex>
+  );
+}

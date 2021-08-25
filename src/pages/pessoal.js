@@ -16,7 +16,7 @@ export default function Pessoal() {
       </Head>
       <Header />
       <Hero
-        effect="/blur-pessoal.png"
+        effect="/blur-pessoal.svg"
         title="Consultoria de imagem pessoal."
         subtitle1="Vamos realizar um processo de descobrimento sobre você, vamos
             definir coloração pessoal, proporção, estilo e silhueta. Depois

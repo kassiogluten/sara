@@ -125,13 +125,13 @@ const Menu1 = () => (
 const Menu2 = () => (
   <HStack spacing={10}>
     <HStack spacing={10} display={{ base: "none", lg: "flex" }}>
-      <Text as="a" href="#">
+      <Text as="a" href="/mentorias">
         Mentorias
       </Text>
       <Text as="a" href="#">
         Cursos
       </Text>
-      <Text as="a" href="#">
+      <Text as="a" href="/estacoes">
         Estações
       </Text>
     </HStack>

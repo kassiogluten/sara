@@ -16,7 +16,7 @@ export default function Empresas() {
       </Head>
       <Header />
       <Hero
-        effect="/blur-empresas.png"
+        effect="/blur-empresas.svg"
         title="Consultoria para empresas."
         subtitle1="Meu objetivo é assessorar empresas no alinhamento da imagem pessoal e profissional para o alcance de uma comunicação mais assertiva, que transmita competência e credibilidade. "
       />
