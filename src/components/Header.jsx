@@ -26,7 +26,6 @@ import {
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <header>
       <Box
         fontFamily="Playfair Display"
         fontSize="18px"
@@ -103,7 +102,6 @@ export function Header() {
           </DrawerContent>
         </Drawer>
       </Box>
-    </header>
   );
 }
 
@@ -120,7 +118,7 @@ const Menu2 = () => (
   <>
     <Link href="/mentorias">Mentorias</Link>
     <Link href="/#">Cursos</Link>
-    <Link href="/">Estações</Link>
+    <Link href="/estacoes">Estações</Link>
   </>
 );
 const SocialMenu = () => (

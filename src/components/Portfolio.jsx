@@ -15,9 +15,9 @@ import React from "react";
 export function Portfolio() {
   //  const { isModalOpen } = useMyContext();
   return (
-    <Box
+    <Box as="section"
       flexDir={{ base: "column", sm: "row" }}
-      bg="gray.900"
+      bg="cinza"
       align="center"
       w="100%"
       display="inline-flex"
@@ -25,21 +25,33 @@ export function Portfolio() {
       id="cases"
     >
       <Grid
-        h={{ base: "200vw", lg: "50vw" }}
-        templateRows={{base:'repeat(4, 1fr)', lg: "repeat(2, 1fr)"}}
-        templateColumns={{base:'repeat(2, 1fr)', lg: "repeat(4, 1fr)"}}
+        templateColumns={{ base: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }}
         gap={1}
         w="full"
       >
-        <GridItem rowSpan={1} colSpan={1} bg="cinza" _hover={{bg:'cinzaescuro', cursor:'pointer'}}/>
-        <GridItem rowSpan={1} colSpan={1} bg="cinza" _hover={{bg:'cinzaescuro', cursor:'pointer'}}/>
-        <GridItem rowSpan={1} colSpan={1} bg="cinza" _hover={{bg:'cinzaescuro', cursor:'pointer'}}/>
-        <GridItem rowSpan={1} colSpan={1} bg="cinza" _hover={{bg:'cinzaescuro', cursor:'pointer'}}/>
-        <GridItem rowSpan={1} colSpan={1} bg="cinza" _hover={{bg:'cinzaescuro', cursor:'pointer'}}/>
-        <GridItem rowSpan={1} colSpan={1} bg="cinza" _hover={{bg:'cinzaescuro', cursor:'pointer'}}/>
-        <GridItem rowSpan={1} colSpan={1} bg="cinza" _hover={{bg:'cinzaescuro', cursor:'pointer'}}/>
-        <GridItem rowSpan={1} colSpan={1} bg="cinza" _hover={{bg:'cinzaescuro', cursor:'pointer'}}/>
+        <Port url="/portfolio" img="/portfolio-prominas1.jpg" />
+        <Port />
+        <Port />
+        <Port />
+        <Port />
+        <Port />
+        <Port />
+        <Port />
       </Grid>
     </Box>
   );
 }
+
+const Port = ({ img, url }) => (
+  <GridItem
+    as="a"
+    h={{ base: "50vw", lg: "25vw" }}
+    bgRepeat="no-repeat"
+    bgSize="cover"
+    bgPos="center top"
+    bgImage={img}
+    bg={img || "cinzaclaro"}
+    href={url}
+    _hover={{ filter: "brightness(1.1)" }}
+  />
+);

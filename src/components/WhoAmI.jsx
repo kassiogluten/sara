@@ -6,7 +6,7 @@ import React from "react";
 export function WhoAmI() {
   //  const { isModalOpen } = useMyContext();
   return (
-    <Box align="center" w="100%" background="url(/sarah2.jpg) no-repeat 60% 50%" bgSize="cover">
+    <Box align="center" w="100%" background="url(/sarah2.jpg) no-repeat 60% 50%" bgSize="cover" id="quem-sou">
       <Flex
         px="1rem"
         align="start"

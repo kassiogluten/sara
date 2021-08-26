@@ -128,11 +128,11 @@ input::placeholder {
 }
 
 #circulo {
-  animation: rotate 15s infinite alternate ease-in-out;
+  animation: rotate 20s infinite alternate ease-in-out;
   transform-origin: center center;
 }
 #blur {
-  animation: hues 2500ms infinite alternate;
+  animation: hues 1750ms infinite alternate;
 }
 #copyright:hover #coracao {
   animation: coracao 1s infinite linear;

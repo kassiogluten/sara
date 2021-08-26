@@ -52,10 +52,12 @@ export function Footer() {
           >
             A Sarah
           </Heading>
-          <Text>Conteúdos</Text>
-          <Text>Me conheça</Text>
-          <Text>Blog</Text>
-          <Text>Fale comigo</Text>
+          <Text as="a" href="#servicos">Conteúdos</Text>
+          <Text as="a" href="#quem-sou">
+            Me conheça
+          </Text>
+          <Text as="a" href="#blog">Blog</Text>
+          <Text as="a" href="#contato">Fale comigo</Text>
         </Stack>
         <Stack flex={1.2} p={2}>
           <Heading
@@ -69,12 +71,12 @@ export function Footer() {
           >
             Serviços
           </Heading>
-          <Text>Cursos</Text>
-          <Text>Mentorias</Text>
-          <Text>Consultoria para pessoas</Text>
-          <Text>Consultoria para empresas</Text>
-          <Text>Consultoria de design de moda</Text>
-          <Text>Características das estações</Text>
+          <Text as="a" href="#">Cursos</Text>
+          <Text as="a" href="/mentorias">Mentorias</Text>
+          <Text as="a" href="/pessoal">Consultoria para pessoas</Text>
+          <Text as="a" href="/empresas">Consultoria para empresas</Text>
+          <Text as="a" href="/moda">Consultoria de design de moda</Text>
+          <Text as="a" href="/estacoes">Características das estações</Text>
         </Stack>
         <Stack flex={1} p={2}>
           <Heading

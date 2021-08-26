@@ -1,15 +1,11 @@
 import {
   Box,
-  Button,
   Flex,
   Heading,
-  Image,
   Text,
-  VStack,
 } from "@chakra-ui/react";
 
 import React from "react";
-import { ScrollSvg } from "../../../icons";
 
 export function Hero({effect, title, subtitle1, subtitle2}) {
   return (
