@@ -6,7 +6,7 @@ import React from "react";
 export function Hero() {
   //  const { isModalOpen } = useMyContext();
   return (
-    <Box align="center" w="100%" >
+    <Box align="center" w="100%" as="section" >
       <Flex
         p="5rem 1rem"
         align="center"

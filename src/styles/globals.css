@@ -131,11 +131,46 @@ input::placeholder {
   animation: rotate 20s infinite alternate ease-in-out;
   transform-origin: center center;
 }
+#circulo2 {
+  animation: rotate2 2s infinite ease-in-out;
+  transform-origin: center center;
+}
+#circulo3 {
+  animation: scale 1s infinite ease-in-out;
+  transform-origin: center center;
+}
+#loading {
+  animation: fade 1s;
+  animation-delay: 2s;
+}
 #blur {
   animation: hues 1750ms infinite alternate;
 }
 #copyright:hover #coracao {
   animation: coracao 1s infinite linear;
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  50% {
+    transform: rotateZ(-180deg);
+  }
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+@keyframes scale {
+  0%,100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.95);
+  }
+
 }
 @keyframes rotate {
   from {
@@ -143,6 +178,14 @@ input::placeholder {
   }
   to {
     transform: rotateZ(180deg);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  66%,100% {
+    opacity: 0;
   }
 }
 @keyframes hues {
@@ -161,7 +204,8 @@ input::placeholder {
   100% {
     transform: scale(1);
   }
-  40%,60% {
+  40%,
+  60% {
     transform: scale(1.2);
   }
 }

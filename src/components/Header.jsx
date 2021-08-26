@@ -95,7 +95,7 @@ export function Header() {
             >
                 <Menu1 />
                 <Menu2 />
-              <Box pt={8}>
+              <Box pt={8} >
                 <Logo2Svg />
               </Box>
             </DrawerBody>
