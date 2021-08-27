@@ -29,10 +29,10 @@ export function Content() {
           ESTAÇÕES
         </Heading>
         {/* <Image minW="500px" alt="Blur" src="/blur-mentorias.svg" /> */}
-        <Card name="Primavera" img="/primavera.jpg" url="/primavera" />
-        <Card name="Verão" img="/verao.jpg" url="/verao" />
-        <Card name="Outono" img="/outono.jpg" url="/outono" />
-        <Card name="Inverno" img="/inverno.jpg" url="/inverno" />
+        <Card name="Primavera" img="/primavera.jpg" url="/blog/primavera" />
+        <Card name="Verão" img="/verao.jpg" url="/blog/verao" />
+        <Card name="Outono" img="/outono.jpg" url="/blog/outono" />
+        <Card name="Inverno" img="/inverno.jpg" url="/blog/inverno" />
       </Flex>
     </Box>
   );

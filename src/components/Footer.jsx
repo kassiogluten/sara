@@ -52,12 +52,12 @@ export function Footer() {
           >
             A Sarah
           </Heading>
-          <Text as="a" href="#servicos">Conteúdos</Text>
-          <Text as="a" href="#quem-sou">
+          <Text as="a" href="/#servicos">Conteúdos</Text>
+          <Text as="a" href="/#quem-sou">
             Me conheça
           </Text>
-          <Text as="a" href="#blog">Blog</Text>
-          <Text as="a" href="#contato">Fale comigo</Text>
+          <Text as="a" href="/#blog">Blog</Text>
+          <Text as="a" href="/#contato">Fale comigo</Text>
         </Stack>
         <Stack flex={1.2} p={2}>
           <Heading
