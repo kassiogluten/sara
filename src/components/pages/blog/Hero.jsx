@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 
 import React from "react";
 
@@ -26,7 +26,8 @@ export function Hero({ effect, title, img, subtitle1 }) {
         h={600}
         w="full"
         sx={{
-          background: `linear-gradient(360deg, #141314 0%, rgba(20, 19, 20, 0) 100%), url(${img}) center`,
+          background: `linear-gradient(360deg, #141314 0%, rgba(20, 19, 20, 0) 100%), url(${img}) 50% 50%`,
+          backgroundSize:'cover'
         }}
       >
         {/* <Image w="full" alt={title} src={img} /> */}

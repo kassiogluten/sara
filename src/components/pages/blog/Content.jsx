@@ -42,7 +42,7 @@ export function Content({ html, conclusao }) {
               width: "fit-content",
               bgClip: "text",
             },
-            img: { paddingY: 16 },
+            img: { paddingY: 16, w:"full" },
           }}
         />
         <Grid

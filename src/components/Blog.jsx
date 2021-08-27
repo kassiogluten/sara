@@ -1,10 +1,11 @@
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+/* eslint-disable @next/next/link-passhref */
+import { Box, Flex, Heading, Image, Link } from "@chakra-ui/react";
 import SwiperCore, { Navigation } from "swiper/core";
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const posts = [
+/* const posts = [
   {
     title: "8 passos para melhorar seu relacionamento com o guarda-roupas",
     img: "blog1.jpg",
@@ -23,11 +24,11 @@ const posts = [
       "Vamos viajar? 5 dicas infaliveis para montar sua mala inteligente de viagemm",
     img: "blog2.jpg",
   },
-];
+]; */
 
 SwiperCore.use([Navigation]);
 
-export function Blog() {
+export function Blog({ posts }) {
   return (
     <Box align="center" w="100%" pos="relative" id="blog">
       <Flex
@@ -42,7 +43,7 @@ export function Blog() {
         <Heading pb={8} maxW={350} textTransform="uppercase">
           Uma leitura que vale a pena
         </Heading>
-        <Posts />
+        <Posts posts={posts} />
       </Flex>
       <Image
         zIndex={-1}
@@ -56,7 +57,7 @@ export function Blog() {
   );
 }
 
-const Posts = () => (
+const Posts = ({ posts }) => (
   <Swiper
     slidesPerView={"auto"}
     spaceBetween={30}
@@ -70,23 +71,48 @@ const Posts = () => (
     className="Blog"
   >
     {posts.map((post) => (
-      <SwiperSlide key={post.title}>
-        <Box pos="relative">
-          <Image alt={post.title} src={post.img} />
+      <SwiperSlide key={post.slug}>
+        <Flex
+          as="a"
+          href={post.path}
+          //_hover={{ cursor: "pointer", filter:'brightness(1.25)' }}
+          w="100%"
+          h={{ base: "375px", md: "500px" }}
+          alignItems="flex-end"
+          sx={{
+            background: ` linear-gradient(
+                180deg,
+                rgba(20, 19, 20, 0) 0%,
+                rgba(20, 19, 20, 0.8) 76.04%,
+                #1c1c1c 100%
+              ), url(${post.featuredImage?.node.mediaItemUrl}) 50% 50%`,
+            backgroundSize: "cover",
+          }}
+        >
           <Heading
             p={{ base: 4, sm: 8 }}
             textAlign="start"
             fontFamily="Nunito"
             fontSize={{ base: 16, sm: 24 }}
-            zIndex={99}
             color="white"
-            pos="absolute"
-            bottom={0}
           >
             {post.title}
           </Heading>
-        </Box>
+        </Flex>
       </SwiperSlide>
     ))}
   </Swiper>
 );
+/* 
+.Blog .swiper-slide::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 19, 20, 0) 0%,
+    rgba(20, 19, 20, 0.8) 76.04%,
+    #1c1c1c 100%
+  );
+  width: 100%;
+  height: 100%;
+} */

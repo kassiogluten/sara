@@ -18,10 +18,10 @@ export default function Post({ post }) {
       <Hero
         effect="/blur-portfolio.svg"
         title={post.title}
-        img={post.featuredImage.node.mediaItemUrl}
-        subtitle1={post.adicionais.subtitulo}
+        img={post.featuredImage?.node.mediaItemUrl}
+        subtitle1={post.adicionais?.subtitulo}
       />
-      <Content conclusao={post.adicionais.conclusao} html={post.content} />
+      <Content conclusao={post.adicionais?.conclusao} html={post.content} />
       <Footer />
     </>
   );
@@ -46,7 +46,6 @@ export async function getStaticProps({ params = {} } = {}) {
           adicionais {
             conclusao
             subtitulo
-            fieldGroupName
           }
           featuredImage {
             node {
@@ -66,7 +65,6 @@ export async function getStaticProps({ params = {} } = {}) {
   const site = {
     ...data?.data.generalSettings,
   };
-
   return {
     props: {
       post,
