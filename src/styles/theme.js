@@ -16,7 +16,9 @@ export const theme = extendTheme({
     Button: {
       baseStyle: {
         fontFamily: "Playfair Display",
+        fontWeight: 500,
         borderRadius: 0,
+        py: "25px",
       },
     },
   },

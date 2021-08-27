@@ -1,11 +1,13 @@
 import { Box, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import React from "react";
 import { ScrollSvg } from "../icons";
 
 export function Hero() {
+  const MotionBox = motion(Box);
   return (
     <Box align="center" w="100%">
       <Flex
@@ -33,11 +35,12 @@ export function Hero() {
           <Button
             as="a"
             href="#contato"
-            lineHeight="200%"
             display={{ base: "none", lg: "block" }}
             borderWidth={2}
+            borderColor="white"
             variant="outline"
             w="full"
+            lineHeight={0}
           >
             Faça seu orçamento
           </Button>
@@ -49,25 +52,32 @@ export function Hero() {
           <Button
             as="a"
             href="#contato"
-            lineHeight="200%"
             display={{ base: "block", lg: "none" }}
             borderWidth={2}
+            borderColor="white"
             variant="outline"
             w="full"
+            lineHeight={0}
           >
             Faça seu orçamento
           </Button>
         </VStack>
-        <Box
+        <MotionBox
           transform="translate(-50%, -50%)"
           zIndex={-9}
           top={{ base: "65%", lg: "50%" }}
           left={{ base: "50%", lg: "75%" }}
           w={{ base: 500, lg: 600 }}
           h={{ base: 300, lg: 400 }}
-          filter="blur(100px)"
           bgGradient="linear(to-r, #6f6799, #b3748c, #9a1f37)"
           pos="absolute"
+          animate={{
+            filter: [
+              "hue-rotate(-65deg) blur(100px)",
+              "hue-rotate(25deg) blur(80px)",
+            ],
+          }}
+          transition={{ duration: 2, repeat: Infinity, repeatType:'reverse' }}
         />
       </Flex>
       <Box

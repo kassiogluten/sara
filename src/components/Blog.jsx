@@ -52,6 +52,8 @@ export function Blog({ posts }) {
         top={0}
         alt="Efeito"
         src="/blur1.svg"
+        id="blur"
+        w={{base:"80vw", md:"40vw"}}
       />
     </Box>
   );

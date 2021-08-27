@@ -17,31 +17,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const testimonial = [
   {
     name: "Laís Olivia Castro",
-    img: "https://i.pravatar.cc/80",
+    img: "https://i.pravatar.cc/90",
     job: "Consultoria de imagem pessoal.",
     text: "Adorei a experiência da análise de coloração pessoal! Achei a Sarah uma excelente profissional, super qualificada e atenciosa. Além de ela mesma conseguir analisar as tonalidades que mais combinavam com a minha pele, ela tentava nos ensinar a enxergar também! Achei isso bem interessante. Super recomendo o seu trabalho!",
   },
   {
     name: "Priscila Daiane Rodrigues",
-    img: "https://i.pravatar.cc/81",
+    img: "https://i.pravatar.cc/91",
     job: "Consultoria de imagem pessoal.",
     text: "Adorei a experiência da análise de coloração pessoal! Achei a Sarah uma excelente profissional, super qualificada e atenciosa. Além de ela mesma conseguir analisar as tonalidades que mais combinavam com a minha pele, ela tentava nos ensinar a enxergar também! Achei isso bem interessante. Super recomendo o seu trabalho!",
   },
   {
     name: "Nathan Manoel Moraes",
-    img: "https://i.pravatar.cc/82",
+    img: "https://i.pravatar.cc/92",
     job: "Consultoria de imagem pessoal.",
     text: "Adorei a experiência da análise de coloração pessoal! Achei a Sarah uma excelente profissional, super qualificada e atenciosa. Além de ela mesma conseguir analisar as tonalidades que mais combinavam com a minha pele, ela tentava nos ensinar a enxergar também! Achei isso bem interessante. Super recomendo o seu trabalho!",
   },
   {
     name: "Vitor Brenno",
-    img: "https://i.pravatar.cc/83",
+    img: "https://i.pravatar.cc/93",
     job: "Consultoria de imagem pessoal.",
     text: "Adorei a experiência da análise de coloração pessoal! Achei a Sarah uma excelente profissional, super qualificada e atenciosa. Além de ela mesma conseguir analisar as tonalidades que mais combinavam com a minha pele, ela tentava nos ensinar a enxergar também! Achei isso bem interessante. Super recomendo o seu trabalho!",
   },
   {
     name: "Kassio Gluten",
-    img: "https://i.pravatar.cc/84",
+    img: "https://i.pravatar.cc/94",
     job: "Consultoria de imagem pessoal.",
     text: "Adorei a experiência da análise de coloração pessoal! Achei a Sarah uma excelente profissional, super qualificada e atenciosa. Além de ela mesma conseguir analisar as tonalidades que mais combinavam com a minha pele, ela tentava nos ensinar a enxergar também! Achei isso bem interessante. Super recomendo o seu trabalho!",
   },
@@ -77,15 +77,16 @@ const Testimonial = () => (
         <VStack align="start" textAlign="left">
           <HStack>
             <Box
-              width={87}
-              height={78}
+              width={97}
+              height={85}
               overflow="hidden"
               mr={2}
-              borderRadius="40%"
+              borderRadius="45%"
+              transform="rotate(-5deg)"
             >
               <Image
-                width={87}
-                height={78}
+                width={97}
+                height={85}
                 alt={testimonial.name}
                 src={testimonial.img}
               />

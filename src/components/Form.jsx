@@ -119,6 +119,8 @@ export function Form() {
         top={{ base: "0", sm: "-70%" }}
         alt="Efeito"
         src="/blur2.svg"
+        id="blur"
+        w={{base:"80vw", md:"40vw"}}
       />
     </Box>
   );

@@ -2,6 +2,7 @@ import { CalendarIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, Heading, Image, Link } from "@chakra-ui/react";
 
 import React from "react";
+import { FiCalendar } from "react-icons/fi";
 
 export function Content() {
   return (
@@ -19,7 +20,7 @@ export function Content() {
       <Flex
         p="10rem 1rem"
         align="center"
-        maxW={1200}
+        maxW={1000}
         justify="center"
         flexDir="column"
       >
@@ -30,9 +31,10 @@ export function Content() {
           color="cinza"
           maxW={1008}
           w="full"
-          leftIcon={<CalendarIcon />}
+          fontWeight={500}
+          iconSpacing={4}
+          leftIcon={<FiCalendar size={24} />}
         >
-          {" "}
           Reservar consultoria
         </Button>
       </Flex>

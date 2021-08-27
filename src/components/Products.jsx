@@ -21,7 +21,7 @@ export function Products() {
         maxW={1200}
         flexDir="column"
       >
-        <Heading pb={4} textTransform="uppercase">
+        <Heading fontSize={48}  pb={4} textTransform="uppercase">
           Principais serviços
         </Heading>
         <Card
@@ -68,7 +68,7 @@ function Card({ img, title, desc, url }) {
         src={img}
       />
       <Stack
-        p={8}
+        p={10}
         textAlign="start"
         align="start"
         justify="space-between"
@@ -79,8 +79,7 @@ function Card({ img, title, desc, url }) {
         <Button
           bg="white"
           color="cinza"
-          colorScheme="rs"
-          w={{ base: "full", lg: 300 }}
+          w={{ base: "full", lg: 250 }}
           as="a"
           href={url}
         >
