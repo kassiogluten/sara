@@ -53,7 +53,7 @@ export function Blog({ posts }) {
         alt="Efeito"
         src="/blur1.svg"
         id="blur"
-        w={{base:"80vw", md:"40vw"}}
+        w={{ base: "80vw", md: "40vw" }}
       />
     </Box>
   );
@@ -76,8 +76,9 @@ const Posts = ({ posts }) => (
       <SwiperSlide key={post.slug}>
         <Flex
           as="a"
-          href={post.path}
-          //_hover={{ cursor: "pointer", filter:'brightness(1.25)' }}
+          href={`/blog/${post.slug}`}
+          _hover={{ cursor: "pointer", filter:'brightness(1.20)' }}
+          transition="all 300ms"
           w="100%"
           h={{ base: "375px", md: "500px" }}
           alignItems="flex-end"

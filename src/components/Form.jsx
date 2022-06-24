@@ -32,22 +32,53 @@ export function Form() {
   async function handleSendMessage(data) {
     setIsLoading(true);
 
-    toast({
-      title: "ATENÇÃO !",
-      description:
-        "Recebimento da mensagem ainda em construção.",
-      status: "info",
-      isClosable: true,
-      position: "top",
-      onCloseComplete:()=>setIsLoading(false)
-    });
+    try {
+      const { Nome, Email, Telefone, Mensagem } = data;
+
+      await axios.post("/api/mail/contact", {
+        name: Nome,
+        phone: Telefone,
+        email: Email,
+        message: Mensagem,
+      });
+
+      toast({
+        title: "Obrigado.",
+        description: "Sua mensagem foi enviada",
+        status: "success",
+        isClosable: true,
+        position: "top",
+      });
+
+      reset({ Nome: "", Telefone: "" });
+
+      setIsLoading(false);
+    } catch (err) {
+      setIsLoading(false);
+      toast({
+        title: "Ocorreu um erro.",
+        description:
+          "Por favor, tente novamente mais tarde ou entre em contato com a gente através do WhatsApp.",
+        status: "error",
+        isClosable: true,
+        position: "top",
+      });
+      console.log(err);
+    }
   }
 
   return (
     <Box align="center" w="100%" pos="relative" id="contato">
-      <Flex p="4rem 1rem" align="center" maxW={600} flexDir="column" as="form" onSubmit={handleSubmit(handleSendMessage)}>
+      <Flex
+        p="4rem 1rem"
+        align="center"
+        maxW={600}
+        flexDir="column"
+        as="form"
+        onSubmit={handleSubmit(handleSendMessage)}
+      >
         <Heading pb={2}>Fale comigo</Heading>
-        <VStack w="full" py={8} align="start" >
+        <VStack w="full" py={8} align="start">
           <Input
             id="Nome"
             borderColor={errors.Nome ? "red" : "white"}
@@ -101,7 +132,8 @@ export function Form() {
             Enviar mensagem
           </Button>
         ) : (
-          <Button _loading={{"color": 'white'}}
+          <Button
+            _loading={{ color: "white" }}
             isLoading={isLoading}
             h="56px"
             bg="white"
@@ -113,14 +145,15 @@ export function Form() {
           </Button>
         )}
       </Flex>
-      <Image zIndex={-1}
+      <Image
+        zIndex={-1}
         pos="absolute"
         right={0}
         top={{ base: "0", sm: "-70%" }}
         alt="Efeito"
         src="/blur2.svg"
         id="blur"
-        w={{base:"80vw", md:"40vw"}}
+        w={{ base: "80vw", md: "40vw" }}
       />
     </Box>
   );

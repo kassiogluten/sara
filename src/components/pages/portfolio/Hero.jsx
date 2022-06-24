@@ -7,7 +7,7 @@ export function Hero({ effect, title, img, subtitle1 }) {
     <Box
       id="blur"
       bgRepeat="no-repeat"
-      bgPos={{base:"100% -250%",md: "bottom"}}
+      bgPos={{ base: "100% -250%", md: "bottom" }}
       bgImage={effect}
       align="center"
       w="100%"
@@ -20,11 +20,20 @@ export function Hero({ effect, title, img, subtitle1 }) {
         maxW={1200}
         flexDir="column"
       >
-        <Image px={{ base: 0, md: "100px" }} w="full" alt={title} src={img} />
+        <Image
+          objectFit="cover"
+          objectPosition="center 20%"
+          maxH={424}
+          px={{ base: 0, md: "100px" }}
+          w="full"
+          alt={title}
+          src={img}
+        />
         <Heading
           py={8}
           px={{ base: 0, md: "100px" }}
           fontSize={{ base: "32px", sm: "72px" }}
+          letterSpacing="-2px"
         >
           {title}
         </Heading>

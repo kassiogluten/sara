@@ -20,7 +20,7 @@ export function getApolloClient() {
 export function _createApolloClient() {
   return new ApolloClient({
     link: new HttpLink({
-      uri: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
+      uri: "https://painel.sarahjacob.com.br/graphql",
     }),
     cache: new InMemoryCache(),
   });

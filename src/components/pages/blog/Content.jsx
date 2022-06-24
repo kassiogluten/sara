@@ -42,55 +42,57 @@ export function Content({ html, conclusao }) {
               width: "fit-content",
               bgClip: "text",
             },
-            img: { paddingY: 16, w:"full" },
+            img: { paddingY: 16, w: "full" },
           }}
         />
-        <Grid
-          mt={32}
-          alignItems="end"
-          textAlign="start"
-          templateColumns={{ base: "1fr", md: "1fr 4fr" }}
-        >
-          <GridItem px={4} rowSpan="2" /* {{ base: 1, md: 2 }} */>
-            <Box
-              width={150}
-              height={140}
-              overflow="hidden"
-              mb={{ base: 0, md: 8 }}
-              borderRadius="45%"
-            >
-              <Image
+        {conclusao && (
+          <Grid
+            mt={32}
+            alignItems="end"
+            textAlign="start"
+            templateColumns={{ base: "1fr", md: "1fr 4fr" }}
+          >
+            <GridItem px={4} rowSpan="2" /* {{ base: 1, md: 2 }} */>
+              <Box
                 width={150}
                 height={140}
-                alt="Sarah Jacob"
-                src="/avatar-sarah.jpg"
+                overflow="hidden"
+                mb={{ base: 0, md: 8 }}
+                borderRadius="45%"
+              >
+                <Image
+                  width={150}
+                  height={140}
+                  alt="Sarah Jacob"
+                  src="/avatar-sarah.jpg"
+                />
+              </Box>
+            </GridItem>
+            <GridItem>
+              <Text
+                fontFamily="Playfair Display"
+                fontWeight={700}
+                fontSize={32}
+                paddingTop={16}
+                bgGradient="linear(to-r,#A7CC78 ,#66A9CE,#6B1F9A )"
+                width="fit-content"
+                bgClip="text"
+                p={4}
+              >
+                Conclusão
+              </Text>
+            </GridItem>
+            <GridItem>
+              <Box
+                px={4}
+                maxW={700}
+                dangerouslySetInnerHTML={{
+                  __html: conclusao,
+                }}
               />
-            </Box>
-          </GridItem>
-          <GridItem>
-            <Text
-              fontFamily="Playfair Display"
-              fontWeight={700}
-              fontSize={32}
-              paddingTop={16}
-              bgGradient="linear(to-r,#A7CC78 ,#66A9CE,#6B1F9A )"
-              width="fit-content"
-              bgClip="text"
-              p={4}
-            >
-              Conclusão
-            </Text>
-          </GridItem>
-          <GridItem>
-            <Box
-              px={4}
-              maxW={700}
-              dangerouslySetInnerHTML={{
-                __html: conclusao,
-              }}
-            />
-          </GridItem>
-        </Grid>
+            </GridItem>
+          </Grid>
+        )}
         <Stack
           mt={16}
           direction={{ base: "column", lg: "row" }}
@@ -98,8 +100,9 @@ export function Content({ html, conclusao }) {
         >
           <Botao
             icon={<FaWhatsapp size={20} />}
-            link={"whatsapp://send?text=https://sarahjacob.com.br" + router.asPath}
-            
+            link={
+              "whatsapp://send?text=https://sarahjacob.com.br" + router.asPath
+            }
           >
             Compartilhar no Whatsapp
           </Botao>
@@ -114,12 +117,12 @@ export function Content({ html, conclusao }) {
             colorScheme="asd"
             fontWeight="400"
             fontFamily="Nunito"
-            bg={hasCopied ? 'green' : 'cinza'}
+            bg={hasCopied ? "green" : "cinza"}
             color="white"
-            leftIcon={hasCopied ? <FaCheck/> : <FiLink/>}
+            leftIcon={hasCopied ? <FaCheck /> : <FiLink />}
             onClick={onCopy}
           >
-            {hasCopied ? 'Copiado' : 'Copiar link'}
+            {hasCopied ? "Copiado" : "Copiar link"}
           </Button>
         </Stack>
       </Flex>

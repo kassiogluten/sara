@@ -6,11 +6,14 @@ import { getApolloClient } from "../../lib/apollo-client";
 
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
-import { Hero } from "../../components/pages/blog/Hero";
-import { Content } from "../../components/pages/blog/Content";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Center, Spinner } from "@chakra-ui/react";
+import { Hero } from "../../components/pages/portfolio/Hero";
+import { Content } from "../../components/pages/portfolio/Content";
+import { Form } from "../../components/Form";
+
+const colors = { color1: "#BA9257", color2: "#B861B8", color3: "#7B55C5" };
 
 export default function Post() {
   const [loading, setLoading] = useState(true);
@@ -38,6 +41,11 @@ export default function Post() {
               content
               featuredImage {
                 node {
+                  mediaItemUrl
+                }
+              }
+              portfolio {
+                galeria {
                   mediaItemUrl
                 }
               }
@@ -75,7 +83,7 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>{data.title} | Blog Sarah Jacob</title>
+        <title>{data.title} | Portfolio Sarah Jacob</title>
       </Head>
       <Header />
       <Hero
@@ -84,87 +92,15 @@ export default function Post() {
         img={data.featuredImage?.node.mediaItemUrl}
         subtitle1={data.adicionais?.subtitulo}
       />
-      <Content conclusao={data.adicionais?.conclusao} html={data.content} />
+      <Content
+        conclusao={data.adicionais?.conclusao}
+        html={data.content}
+        colors={colors}
+        heading="Cada estilo é único, cada pessoa é única e tem uma história."
+        gallery={data.portfolio.galeria}
+      />
+      <Form />
       <Footer />
     </>
   );
 }
-
-// export async function getStaticProps({ params = {} } = {}) {
-//   const { postSlug } = params;
-
-//   const apolloClient = getApolloClient();
-
-//   const data = await apolloClient.query({
-//     query: gql`
-//       query PostBySlug($slug: String!) {
-//         generalSettings {
-//           title
-//         }
-//         postBy(slug: $slug) {
-//           id
-//           content
-//           title
-//           slug
-//           adicionais {
-//             conclusao
-//             subtitulo
-//           }
-//           featuredImage {
-//             node {
-//               mediaItemUrl
-//             }
-//           }
-//         }
-//       }
-//     `,
-//     variables: {
-//       slug: postSlug,
-//     },
-//   });
-
-//   const post = data?.data.postBy;
-
-//   const site = {
-//     ...data?.data.generalSettings,
-//   };
-//   return {
-//     props: {
-//       post,
-//       site,
-//     },
-//   };
-// }
-
-// export async function getStaticPaths() {
-//   const apolloClient = getApolloClient();
-
-//   const data = await apolloClient.query({
-//     query: gql`
-//       {
-//         posts(first: 10000) {
-//           edges {
-//             node {
-//               id
-//               title
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     `,
-//   });
-
-//   const posts = data?.data.posts.edges.map(({ node }) => node);
-
-//   return {
-//     paths: posts.map(({ slug }) => {
-//       return {
-//         params: {
-//           postSlug: slug,
-//         },
-//       };
-//     }),
-//     fallback: false,
-//   };
-// }
