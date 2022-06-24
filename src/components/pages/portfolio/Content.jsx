@@ -24,19 +24,21 @@ export function Content({ desc1, desc2, colors, gallery, html }) {
           sx={{ p: { pt: 3 } }}
         />
 
-        <Grid
-          templateColumns={{ base: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
-          w="full"
-          py={8}
-        >
-          {gallery.map((item) => (
-            <GridItem key={item.mediaItemUrl}>
-              <a href={item.mediaItemUrl}>
-                <Image alt="Foto" src={item.mediaItemUrl} />
-              </a>
-            </GridItem>
-          ))}
-        </Grid>
+        {gallery.lenght && (
+          <Grid
+            templateColumns={{ base: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
+            w="full"
+            py={8}
+          >
+            {gallery.map((item) => (
+              <GridItem key={item.mediaItemUrl}>
+                <a href={item.mediaItemUrl}>
+                  <Image alt="Foto" src={item.mediaItemUrl} />
+                </a>
+              </GridItem>
+            ))}
+          </Grid>
+        )}
 
         <Text textAlign="start" p={4}>
           {desc2}
