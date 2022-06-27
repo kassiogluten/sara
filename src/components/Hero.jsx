@@ -47,7 +47,7 @@ export function Hero() {
         </VStack>
         <VStack>
           <Box mb={8}>
-            <Image width={488} height={557} alt="Sarah Jacob" src="/sara.jpg" />
+            <Image width={416} height={600} alt="Sarah Jacob" src="/sarah.jpg" />
           </Box>
           <Button
             as="a"

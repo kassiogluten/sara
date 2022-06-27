@@ -6,7 +6,13 @@ import React from "react";
 export function WhoAmI() {
   //  const { isModalOpen } = useMyContext();
   return (
-    <Box align="center" w="100%" background="url(/sarah2.jpg) no-repeat 60% 50%" bgSize="cover" id="quem-sou">
+    <Box
+      align="center"
+      w="100%"
+      background="url(/sarah2b.jpg) no-repeat 60% 50%"
+      bgSize="contain"
+      id="quem-sou"
+    >
       <Flex
         px="1rem"
         align="start"
@@ -16,24 +22,46 @@ export function WhoAmI() {
         h={900}
         flexDir="column"
       >
-        <Heading maxW={420} letterSpacing="-3px" fontSize={{base:'32px',sm:"120px"}} pb={14}>
+        <Heading
+          maxW={420}
+          letterSpacing="-3px"
+          fontSize={{ base: "32px", sm: "120px" }}
+          pb={14}
+        >
           Quem sou eu?
         </Heading>
         <Text maxW={800}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo
-          quam, aliquet eu rutrum quis, dignissim finibus libero. Cras sagittis
-          velit sodales arcu volutpat dignissim. Quisque auctor, lorem non
-          pretium viverra, elit dolor ornare diam, eget molestie velit dui ut
-          orci. Sed eleifend ipsum ut eros lacinia posuere. Morbi dictum ipsum
-          ut aliquam ullamcorper.
+          Sarah Jacob, mineira, artista e admiradora da Beleza.
         </Text>
-        <Text maxW={800} py={4}>
-          Vivamus pharetra ut neque vel mollis. Morbi
-          condimentum orci non nulla euismod scelerisque. Morbi et ultrices dui.
-          Integer suscipit tortor facilisis, dapibus nibh nec, faucibus dui.
-          Praesent congue pellentesque nunc quis ultrices. Praesent neque
-          tortor, ornare in purus sit amet, mollis pellentesque lectus. Nam nunc
-          dui, suscipit sed augue a, cursus efficitur sem.
+        <Text maxW={800} pb={4}>
+          Apaixonada por filosofia.
+        </Text>
+        <Text maxW={800} pb={4}>
+          Formada em Design de Moda com especialização em Análises Faciais pela
+          Persoona® School, um dos maiores nomes de escolas visagistas do Brasil
+          e do mundo.
+        </Text>
+        <Text maxW={800} pb={4}>
+          Estamparia digital, fashion business, fashion law, etiqueta social e
+          corte e costura, são alguns dos cursos da bagagem ao longo dos 10 anos
+          de atuação no mercado da moda.
+        </Text>
+        <Text maxW={800} pb={4}>
+          Com valores bem definidos, estratégias sólidas e um olhar analítico, a
+          defesa da Beleza, da Verdade e da Bondade sempre foram pilares para
+          construção de sua personalidade e objetivo de vida: transformar as
+          pessoas.
+        </Text>
+        <Text maxW={800} pb={4}>
+          Com o estudo recorrente da filosofia, antropologia e simbolismo, pôde
+          enxergar além de belas roupas e maquiagens: a força que a vontade e o
+          controle dos impulsos podem fazer por alguém.
+        </Text>
+        <Text maxW={800} pb={4}>
+          Foi por meio da observação da comunicação, do comportamento humano e
+          da moda – que já estava na sua vida desde a infância – que viu a
+          oportunidade de renascer a feminilidade, elegância e autoconfiança em
+          mulheres.
         </Text>
       </Flex>
     </Box>

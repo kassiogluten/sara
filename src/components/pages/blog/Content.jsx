@@ -43,6 +43,7 @@ export function Content({ html, conclusao }) {
               bgClip: "text",
             },
             img: { paddingY: 16, w: "full" },
+            li: { textAlign: "start" },
           }}
         />
         {conclusao && (
@@ -62,9 +63,9 @@ export function Content({ html, conclusao }) {
               >
                 <Image
                   width={150}
-                  height={140}
+                  height={150}
                   alt="Sarah Jacob"
-                  src="/avatar-sarah.jpg"
+                  src="/avatar-sarahb.jpg"
                 />
               </Box>
             </GridItem>
