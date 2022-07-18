@@ -12,7 +12,7 @@ export function Hero() {
     <Box align="center" w="100%">
       <Flex
         pos="relative"
-        p={{ base: "4rem 1rem", lg: "7rem 1rem 2rem" }}
+        p={{ base: "4rem 0", lg: "7rem 1rem 2rem" }}
         align="center"
         maxW={1050}
         justify="space-between"
@@ -45,9 +45,14 @@ export function Hero() {
             Faça seu orçamento
           </Button>
         </VStack>
-        <VStack>
+        <Flex flexDir="column">
           <Box mb={8}>
-            <Image width={416} height={600} alt="Sarah Jacob" src="/sarah.png" />
+            <Image
+              width={416}
+              height={600}
+              alt="Sarah Jacob"
+              src="/sarah.png"
+            />
           </Box>
           <Button
             as="a"
@@ -56,12 +61,12 @@ export function Hero() {
             borderWidth={2}
             borderColor="white"
             variant="outline"
-            w="full"
             lineHeight={0}
+            mx={"1rem"}
           >
             Faça seu orçamento
           </Button>
-        </VStack>
+        </Flex>
         <MotionBox
           transform="translate(-50%, -50%)"
           zIndex={-9}
@@ -77,7 +82,7 @@ export function Hero() {
               "hue-rotate(25deg) blur(80px)",
             ],
           }}
-          transition={{ duration: 2, repeat: Infinity, repeatType:'reverse' }}
+          transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
         />
       </Flex>
       <Box
