@@ -18,30 +18,18 @@ export default function Pessoal() {
       <Hero
         effect="/blur-pessoal.svg"
         title="Consultoria de imagem pessoal."
-        subtitle1="Vamos realizar um processo de descobrimento sobre você, vamos
-            definir coloração pessoal, proporção, estilo e silhueta. Depois
-            iremos mesclar tudo e montar uma identidade visual única."
-        subtitle2="A proposta aqui é analisar as peças de seu guarda-roupa, conforme a
-        estação vigente, com base em seu estilo pessoal e silhueta."
+        subtitle1="Com a consultoria de imagem, você aprenderá de forma leve, fácil e eficaz a valorizar sua beleza, alavancas sua vida profissional e pessoal, além de saber investir seu dinheiro em apenas o que te favorece."
+        // subtitle2="A sua imagem diz muito sobre você. "
       />
       <Content
         colors={colors}
         heading="A sua imagem diz muito sobre você."
-        desc1="Você sabia que a roupa que escolhemos pela manhã, pode influenciar
-        positivamente ou até negativamente em todas as ações de nosso dia?"
-        desc2=" Ter no armário peças adequadas a nossa realidade de vida e estilo
-        pessoal evitam frustrações no momento de vestir.?"
-        step1="Vamos conversar bastante para entender seus desejos, objetivos
-        pessoais e profissionais e estilo de vida. Realizaremos teste de
-        estilo, personalidade e análise de sua silhueta."
-        step2=" Conforme a estação vigente, vamos analisar as peças de seu
-        guarda-roupa junto contigo. Vou explicar e te mostrar quais
-        peças devem permanecer, quais precisam de reformas e quais devem
-        sair. E se necessário, peças para possível compra."
-        step3=" O resultado do processo é o empoderamento e a autonomia para
-        escolhas concientes, mostrando quem você é como você quer ser
-        vista pelo mundo. Tudo isso é traduzido em roupas, acessórios,
-        cores e elementos de design."
+        desc1="Você sabia que a roupa que escolhemos pela manhã pode influenciar positivamente ou até negativamente nosso humor e ações? Ter no armário peças adequadas a nossa rotina e estilo evitam frustrações ao longo do dia."
+       /*  desc2=" Ter no armário peças adequadas a nossa realidade de vida e estilo
+        pessoal evitam frustrações no momento de vestir.?" */
+        step1="O contato inicial é fundamental para entendermos seus desejos, objetivos pessoais e profissionais. Conversaremos para definir o melhor trabalho a ser realizado para alavancar sua imagem."
+        step2="Decidido o melhor serviço, realizaremos o teste de cor, visagismo, biótipo e/ou estilo para  termos o resultado de quais peças devem permanecer, cores que vão valorizar, acessórios e formas que transmitirão exatamente sua personalidade."
+        step3="O resultado do processo é a autonomia e domínio conscientes da sua aparência, comunicação e comportamento, evidenciando suas qualidades e mostrando quem você é para o mundo. "
         featuredImage="/pessoal2.jpg"
       />
       <Testimonials />

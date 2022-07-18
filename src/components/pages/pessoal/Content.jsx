@@ -27,7 +27,7 @@ export function Content({
     <Box bg="white" color="cinza" align="center" w="100%">
       <Flex p="5rem 1rem" align="center" maxW={1200} flexDir="column">
         <Text
-          maxW={360}
+          maxW={600}
           fontFamily="Playfair Display"
           fontWeight={700}
           fontSize={{ base: 24, sm: 32 }}
@@ -62,7 +62,7 @@ export function Content({
                 bgGradient={`linear(to-r,${colors.color1} ,${colors.color2},${colors.color3} )`}
                 bgClip="text"
               >
-                Como vai funcionar ?
+                Como funciona?
               </Text>
             </Box>
 

@@ -41,6 +41,7 @@ export function Content({ html, conclusao }) {
               bgGradient: "linear(to-r,#A7CC78 ,#66A9CE,#6B1F9A )",
               width: "fit-content",
               bgClip: "text",
+              pb:10,
             },
             img: { paddingY: 16, w: "full" },
             li: { textAlign: "start" },

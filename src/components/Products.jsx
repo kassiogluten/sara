@@ -27,15 +27,15 @@ export function Products() {
         <Card
           img="/pessoal.jpg"
           title="Consultoria de imagem pessoal"
-          desc="Com a consultoria de imagem, você aprenderá de forma leve, fácil e eficaz a valorizar sua beleza, alavancar sua vida profissional e pessoal, além de saber investir seu dinheiro em apenas o que te favorece."
+          desc="Com a consultoria de imagem, você aprenderá de forma leve, fácil e eficaz a valorizar sua beleza, alavancas sua vida profissional e pessoal, além de saber investir seu dinheiro em apenas o que te favorece."
           url="/pessoal"
         ></Card>
-        <Card
+        {/* <Card
           img="/moda.jpg"
           title="Consultoria de design de moda"
           desc="Tenha o design exclusivo de uniforme para sua empresa, associando conforto, qualidade e sofisticação."
           url="/moda"
-        ></Card>
+        ></Card> */}
         <Card
           img="/empresas.jpg"
           title="Consultoria para empresas"

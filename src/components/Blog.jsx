@@ -40,7 +40,7 @@ export function Blog({ posts }) {
         flexDir="column"
         pos="relative"
       >
-        <Heading pb={8} maxW={350} textTransform="uppercase">
+        <Heading pb={8} textTransform="uppercase">
           Uma leitura que vale a pena
         </Heading>
         <Posts posts={posts} />

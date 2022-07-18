@@ -9,8 +9,8 @@ export function WhoAmI() {
     <Box
       align="center"
       w="100%"
-      background="url(/sarah2b.jpg) no-repeat 60% 50%"
-      bgSize="contain"
+      background="url(/sarah2b.jpg) no-repeat 0% 30% / 120%"
+      // bgSize="contain"
       id="quem-sou"
     >
       <Flex
@@ -54,8 +54,8 @@ export function WhoAmI() {
         </Text>
         <Text maxW={800} pb={4}>
           Com o estudo recorrente da filosofia, antropologia e simbolismo, pôde
-          enxergar além de belas roupas e maquiagens: a força que a vontade e o
-          controle dos impulsos podem fazer por alguém.
+          enxergar além de belas roupas e maquiagens: a força que a comunicação
+          e o comportamento podem fazer por alguém.
         </Text>
         <Text maxW={800} pb={4}>
           Foi por meio da observação da comunicação, do comportamento humano e

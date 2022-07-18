@@ -18,16 +18,15 @@ export default function Empresas() {
       <Hero
         effect="/blur-empresas.svg"
         title="Consultoria para empresas."
-        subtitle1="Meu objetivo é assessorar empresas no alinhamento da imagem pessoal e profissional para o alcance de uma comunicação mais assertiva, que transmita competência e credibilidade. "
+        subtitle1="Alavanque seu negócio com a consultoria e treinamento personalizado de moda, marketing e etiqueta profissional."
       />
       <Content
         colors={colors}
         heading="Um estilo único para sua empresa."
-        desc1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
-        step1="Vamos conversar bastante para entender seus desejos, objetivos pessoais e profissionais e estilo de vida.
-        Realizaremos teste de estilo, personalidade e análise de sua silhueta."
-        step2="Conforme a estação vigente, vamos analisar as peças de seu guarda-roupa junto contigo. Vou explicar e te mostrar quais peças devem permanecer, quais precisam de reformas e quais devem sair. E se necessário, peças para possível compra."
-        step3=" O resultado do processo é o empoderamento e a autonomia para escolhas concientes, mostrando quem você é como você quer ser vista pelo mundo. Tudo isso é traduzido em roupas, acessórios, cores e elementos de design."
+        desc1="Por meio da consultoria de moda e etiqueta profissional, a empresa pode se posicionar no mercado se diferenciando da concorrência e alcançando a liderança, conquistando um lugar de destaque entre os consumidores. "
+        step1="Conversaremos sobre as dificuldades da empresa, persona e posicionamento para que, dessa forma, possamos delinear a estratégia de treinamento de moda para os colaboradores."
+        step2="Nesse momento, é definido horas, datas, materiais e local para o treinamento da equipe."
+        step3="O resultado do processo é o completo domínio de moda dos colaboradores da empresa, a fim de alavancar vendas, se diferenciar dos concorrentes e trazer confiança ao consumidor."
         featuredImage="/empresas2.jpg"
       />
       <Testimonials />

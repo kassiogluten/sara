@@ -13,7 +13,7 @@ export function Hero() {
         flexDir="column"
       >
         <Box maxW={700}>
-          <Heading fontSize={{ base: "48px", md: "128px" }}>Mentorias.</Heading>
+          <Heading fontSize={{ base: "32px", md: "72px" }}>Mentorias.</Heading>
           <Text pt={24} fontSize="1rem">
             Você está cansada de seguir um monte de consultora de imagem no
             Instagram, ficar escutando dicas das influenciadoras, pegar
