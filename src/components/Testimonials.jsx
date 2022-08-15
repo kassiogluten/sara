@@ -17,19 +17,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const testimonial = [
   {
     name: "Juliana Mattos",
-    // img: "https://i.pravatar.cc/91",
+    img: "/juliana.jpeg",
     job: "Dentista e Administradora",
     text: "Falar da Sarah Jacob é muito fácil! É uma profissional totalmente fora da curva. Depois da consultoria que fiz com Sarah mudei minha visão sobre as cores. E isso teve um impacto enorme em minha autoestima, principalmente na mudança de cor do meu cabelo. Sarah, obrigada pela consultoria. Obrigada por transmitir esse conhecimento maravilhoso. E que você continue impactando a autoestima das pessoas. Você é fantástica.",
   },
   {
     name: "Lara Braga",
-    // img: "https://i.pravatar.cc/91",
+    img: "/lara.jpeg",
     job: "Empreendedora",
     text: "Desde quando me tornei mãe pude experimentar mudanças internas extraordinárias. Crescimento pessoal, profissional, mudanças de comportamentos e pensamentos, dentre tantas outras coisas. Porém, infelizmente, deixei de olhar para minha aparência e tinha pouquíssimo autocuidado.  Até que um dia, quando finalmente encarei essa área da minha vida, percebi que minha aparência não tinha acompanhado toda a minha mudança nesses últimos anos. Eu precisava urgentemente de uma mudança! Não pensei em outra pessoa há não ser a Sarah para poder fazer parte dessa transformação! Era um momento muito importante pra mim. De reconexão comigo mesma. De alinhamento do interno com o externo. De pode mostrar ao mundo a mulher que existia dentro de mim. E ainda bem que a escolhi! A consultoria abriu meus olhos para o novo! Pude olhar para dentro de mim novamente, dessa vez de uma forma reveladora, onde eu descobria meus gostos, quem eu queria ser e transmitir por onde eu passasse. Eu era uma pessoa que achava inviável me arrumar todos os dias. Que saia de qualquer jeito, com qualquer roupa, cabelo desarrumado e de cara limpa. De certa forma isso me incomodava muito, porém eu não tinha forças pra mudar sozinha e ficava dizendo que isso era supérfluo, que não era tão importante assim ou ainda que não era uma prioridade.  Depois da consultoria de estilo, eu comecei a ter pequenos passos de autocuidado e isso tem me transformado! Não só na aparecia, mas interiormente. Tenho me arrumado diariamente. Me sinto mais linda, mais confiante, me tornei até mais disciplinada pelo simples fato de ter que encaixar o hábito de me arrumar na minha rotina! Descobri que a beleza importa sim e que ela muda tudo ao nosso redor! Sou imensamente grata a Sarah, que com tanto cuidado, profissionalismo, amor e paciência fez parte do início dessa mudança! Digo início porque ainda há muito o que mudar! Mas agora, graças a ela, eu sei o caminho! Eu sei como fazer! Por fim, digo que meu único arrependimento foi não ter feito antes!",
   },
   {
     name: "Lucrécia Santos",
-    // img: "https://i.pravatar.cc/92",
+    img: "/lucrecia.jpeg",
     job: "Costureira",
     text: "Melhor investimento da vida… todo mundo deveria fazer!",
   },
@@ -77,6 +77,7 @@ const Testimonial = () => (
                 height={85}
                 alt={testimonial.name}
                 src={testimonial.img || "/user.png"}
+                objectFit="cover"
               />
             </Box>
             <VStack align="start" textAlign="left">

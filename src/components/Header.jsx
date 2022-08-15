@@ -117,7 +117,7 @@ const Menu1 = () => (
 const Menu2 = () => (
   <>
     <Link href="/mentorias">Mentorias</Link>
-    <Link href="/#">Cursos</Link>
+    <Link href="/#contato">Cursos</Link>
     <Link href="/estacoes">Estações</Link>
   </>
 );

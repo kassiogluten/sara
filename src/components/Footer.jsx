@@ -71,7 +71,7 @@ export function Footer() {
           >
             Serviços
           </Heading>
-          <Text as="a" href="#">Cursos</Text>
+          <Text as="a" href="/#contato">Cursos</Text>
           <Text as="a" href="/mentorias">Mentorias</Text>
           <Text as="a" href="/pessoal">Consultoria para pessoas</Text>
           <Text as="a" href="/empresas">Consultoria para empresas</Text>
