@@ -52,6 +52,7 @@ export function Hero() {
               height={600}
               alt="Sarah Jacob"
               src="/sarah.png"
+              unoptimized
             />
           </Box>
           <Button

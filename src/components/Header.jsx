@@ -26,82 +26,87 @@ import {
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-      <Box
-        fontFamily="Playfair Display"
-        fontSize="18px"
-        fontWeight={400}
+    <Box
+      fontFamily="Playfair Display"
+      fontSize="18px"
+      fontWeight={400}
+      align="center"
+      w="100%"
+    >
+      <Flex
+        p="1rem"
+        w="full"
         align="center"
-        w="100%"
+        maxW={1200}
+        justify="space-between"
       >
         <Flex
-          p="1rem"
+          w="full"
+          justify="space-between"
+          display={{ base: "flex", lg: "none" }}
+        >
+          <IconButton bg="none" onClick={onOpen}>
+            {isOpen ? (
+              <CloseButton color="white" size={30} />
+            ) : (
+              <FiMenu color="white" size={30} />
+            )}
+          </IconButton>
+          <SocialMenu />
+        </Flex>
+        <Flex
           w="full"
           align="center"
-          maxW={1200}
           justify="space-between"
+          display={{ base: "none", lg: "flex" }}
         >
-          <Flex w="full" justify="space-between" display={{ base: "flex", lg: "none" }}>
-            <IconButton
-              bg="none"
-              onClick={onOpen}
-              
-            >
-              {isOpen ? (
-                <CloseButton color="white" size={30} />
-              ) : (
-                <FiMenu color="white" size={30} />
-              )}
-            </IconButton>
+          <Flex flex={1} justify="space-between">
+            <Menu1 />
+          </Flex>
+          <Box flex={0.6}>
+            <LogoSvg />
+          </Box>
+          <Flex flex={1} justify="space-between">
+            <Menu2 />
             <SocialMenu />
           </Flex>
-          <Flex w="full" align="center" justify="space-between" display={{ base: "none", lg: "flex" }}>
-            <Flex flex={1} justify="space-between">
-              <Menu1 />
-            </Flex>
-            <Box flex={.6}>
-              <LogoSvg />
-            </Box>
-            <Flex flex={1} justify="space-between">
-              <Menu2 />
-              <SocialMenu />
-            </Flex>
-          </Flex>
         </Flex>
-        <Drawer
-          placement="left"
-          closeOnOverlayClick
-          autoFocus={false}
-          returnFocusOnClose={false}
-          isOpen={isOpen}
-          onClose={onClose}
-          size="full"
-        >
-          <DrawerContent bg="transparent">
-            <DrawerHeader
-              onClick={onClose}
-              pt={12}
-              align="end"
-              bg="transparent"
-            />
-            <DrawerBody
-              display="flex"
-              flexDir="column"
-              bg="cinza"
-              onClick={onClose}
-              alignItems="center"
-              justifyContent="space-evenly"
-              fontSize={24}
-              fontFamily="Playfair Display"
-            >
-                <Menu1 />
-                <Menu2 />
-              <Box pt={8} >
-                <Logo2Svg />
-              </Box>
-            </DrawerBody>
-          </DrawerContent>
-        </Drawer>
-      </Box>
+      </Flex>
+      <Drawer
+        placement="left"
+        closeOnOverlayClick
+        autoFocus={false}
+        returnFocusOnClose={false}
+        isOpen={isOpen}
+        onClose={onClose}
+        size="full"
+      >
+        <DrawerContent bg="transparent">
+          <DrawerHeader
+            onClick={onClose}
+            pt={12}
+            align="end"
+            bg="transparent"
+          />
+          <DrawerBody
+            display="flex"
+            flexDir="column"
+            bg="cinza"
+            onClick={onClose}
+            alignItems="center"
+            justifyContent="space-evenly"
+            fontSize={24}
+            fontFamily="Playfair Display"
+          >
+            <Menu1 />
+            <Menu2 />
+            <Box pt={8}>
+              <Logo2Svg />
+            </Box>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </Box>
   );
 }
 
@@ -123,16 +128,20 @@ const Menu2 = () => (
 );
 const SocialMenu = () => (
   <HStack spacing={2}>
-    <a href="https://spotify.com">
+    <a
+      rel="noreferrer"
+      target="_blank"
+      href="https://open.spotify.com/user/22hce2b56rpswifwotlapqx6i?si=DtuXZxN4SLKGBROnkaAbQQ"
+    >
       <SpotifySvg />
     </a>
-    <a href="https://facebook.com">
+    <a rel="noreferrer" target="_blank" href="https://www.facebook.com/sarahjacobm">
       <FacebookSvg />
     </a>
-    <a href="https://youtube.com">
+    <a rel="noreferrer" target="_blank" href="https://youtube.com/channel/UCyXMKkEjsBb3JMjQMVD0lsw">
       <YoutubeSvg />
     </a>
-    <a href="https://instagram.com">
+    <a rel="noreferrer" target="_blank" href="https://instagram.com/sarahjacobm">
       <InstagramSvg />
     </a>
   </HStack>

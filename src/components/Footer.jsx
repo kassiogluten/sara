@@ -91,16 +91,16 @@ export function Footer() {
             Redes sociais
           </Heading>
           <HStack spacing={2}>
-            <Link href="#">
+            <Link target="_blank" href="https://open.spotify.com/user/22hce2b56rpswifwotlapqx6i?si=DtuXZxN4SLKGBROnkaAbQQ">
               <SpotifySvg />
             </Link>
-            <Link href="#">
+            <Link target="_blank" href="https://www.facebook.com/sarahjacobm">
               <FacebookSvg />
             </Link>
-            <Link href="#">
+            <Link target="_blank" href="https://youtube.com/channel/UCyXMKkEjsBb3JMjQMVD0lsw">
               <YoutubeSvg />
             </Link>
-            <Link href="#">
+            <Link target="_blank" href="https://instagram.com/sarahjacobm">
               <InstagramSvg />
             </Link>
           </HStack>
